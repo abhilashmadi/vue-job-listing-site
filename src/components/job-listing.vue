@@ -1,4 +1,6 @@
 <script setup>
+import { RouteNames } from '@/resources/constants';
+
 defineProps({
   job: {
     type: Object,
@@ -29,10 +31,10 @@ defineProps({
             {{ job.location }}
           </div>
         </div>
-        <a :href="`/job/${job.id}`"
+        <router-link v-if="job && job.id" :to="{ name: RouteNames.JOB_PAGE, params: { id: job.id } }"
           class="h-[36px] bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm">
           Read More
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
