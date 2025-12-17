@@ -1,5 +1,6 @@
 <script setup>
-import Card from '@/components/card.vue'
+import Card from '@/components/card.vue';
+import { RouteNames } from '@/resources/constants';
 </script>
 
 <template>
@@ -12,9 +13,10 @@ import Card from '@/components/card.vue'
           <p class="mt-2 mb-4">
             Browse our Vue jobs and start your career today
           </p>
-          <a href="jobs.html" class="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700">
+          <router-link :to="{ name: RouteNames.JOBS_PAGE }"
+            class="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700">
             Browse Jobs
-          </a>
+          </router-link>
         </Card>
 
         <Card bg="bg-green-100">
@@ -22,9 +24,10 @@ import Card from '@/components/card.vue'
           <p class="mt-2 mb-4">
             List your job to find the perfect developer for the role
           </p>
-          <a href="add-job.html" class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600">
+          <router-link :to="{ name: RouteNames.ADD_JOB_PAGE }"
+            class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600">
             Add Job
-          </a>
+          </router-link>
         </Card>
 
       </div>
