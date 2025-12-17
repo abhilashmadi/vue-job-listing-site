@@ -24,7 +24,7 @@ const jobs = ref(jobsMockData);
         Browse Jobs
       </h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 container-xl lg:container m-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 container-xl lg:container m-auto lg:px-4">
       <JobListing v-for="job in jobs.slice(0, limit)" :key="job.id" :job="job" />
     </div>
     <section v-if="showViewMore" class="m-auto max-w-lg my-10 px-6">
