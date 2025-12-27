@@ -4,10 +4,7 @@ import jobsMockData from '@/mock/jobs.json'
 import JobListing from '@/components/job-listing.vue'
 
 defineProps({
-  limit: {
-    type: Number,
-    default: 3,
-  },
+  limit: Number,
   showViewMore: {
     type: Boolean,
     default: true,

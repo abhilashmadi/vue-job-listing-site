@@ -4,7 +4,7 @@ import { RouteNames } from "./resources/constants"
 const LandingPage = () => import('@/views/landing-page.vue')
 const JobsPage = () => import('@/views/jobs-page.vue')
 const JobPage = () => import('@/views/job-page.vue')
-const AddJobPage = () => import('@/views/addjob-page.vue')
+const AddJobPage = () => import('@/views/add-job-page.vue')
 const NotFoundPage = () => import('@/views/not-found-page.vue')
 
 const routes = [
